@@ -69,21 +69,6 @@ public class Personaje
         }
     }
     
-    public void girarV2() {
-       if(orientacion == ESTE){
-            orientacion = SUR;   
-        }            
-       else if(orientacion == NORTE){
-            orientacion = ESTE;
-        }
-            
-       else if(orientacion == OESTE){
-            orientacion = NORTE;
-        }       
-       else{
-            orientacion = OESTE;    
-        }
-    }    
     
     public String toString(){
         return "Personaje = " + nombre + "\n" + 
