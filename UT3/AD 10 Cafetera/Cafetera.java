@@ -12,8 +12,7 @@ public class Cafetera
     /**
      * constructor para los objetos de la clase Cafetera
      */
-    public Cafetera()
-    {
+    public Cafetera()    {
         capacidadMaxima = 1000;
         cantidadActual = 0;
     }
@@ -23,8 +22,7 @@ public class Cafetera
      *
      * @return   capacidad máxima de la cafetera  
      */
-    public int getCapacidadMaxima()
-    {
+    public int getCapacidadMaxima()    {
         return capacidadMaxima;
     }
 
@@ -33,8 +31,7 @@ public class Cafetera
      *
      * @return   capacidad actual de la cafetera  
      */
-    public int getCantidadActual()
-    {
+    public int getCantidadActual()    {
         return cantidadActual;
     }
 
@@ -43,8 +40,7 @@ public class Cafetera
      *
      * @param   capacidad máxima de la cafetera  
      */
-    public void setCapacidadMaxima(int queCapacidadMaxima)
-    {
+    public void setCapacidadMaxima(int queCapacidadMaxima)    {
         capacidadMaxima = queCapacidadMaxima; 
     }
 
@@ -53,8 +49,7 @@ public class Cafetera
      *
      * @param  cantidad actual de la cafetera  
      */
-    public void setCantidadActual(int queCantidadActual)
-    {
+    public void setCantidadActual(int queCantidadActual)    {
         cantidadActual = queCantidadActual; 
     }
 
@@ -63,8 +58,7 @@ public class Cafetera
      *
      * Llena la cafetera poniendo la cantidad actual a su capacidad máxima
      */
-    public void llenarCafetera()
-    {
+    public void llenarCafetera()    {
         cantidadActual = capacidadMaxima;
     }
 
@@ -73,8 +67,7 @@ public class Cafetera
      * @param cantidad  la capacidad de una taza de café 
      */
 
-    public void servirTaza(int cantidad)
-    {
+    public void servirTaza(int cantidad)    {
         if (cantidadActual < cantidad)  {
             // no llega para toda la taza, se sirve lo que hay
             cantidadActual = 0;
@@ -89,8 +82,7 @@ public class Cafetera
      *
      * Vaciar la cafetera poniendo la cantidad actual a 0
      */
-    public void vaciarCafetera()
-    {
+    public void vaciarCafetera()    {
         cantidadActual = 0;
     }
 
@@ -100,8 +92,7 @@ public class Cafetera
      * Agrega café a la cafetera
      * @param  cantidad de café a agregar
      */
-    public void agregarCafe(int cantidad)
-    {
+    public void agregarCafe(int cantidad)    {
         if (capacidadMaxima - cantidadActual <= cantidad)  {
             cantidadActual = capacidadMaxima;
         }

@@ -2,11 +2,11 @@
 Describe aquí el propósito del proyecto
 ------------------------------------------------------------------------
 
-TITULO PROYECTO: Cafetera
+TITULO PROYECTO:  Calculadora
 PROPOSITO DEL PROYECTO:
-    - clase, objeto, accesores, mutadores, ..
-    - if
-    
+    - conceptos iniciales, atributos, métodos, ..
+    - acumular
+    - sentencia if
 VERSION O FECHA:
 COMO EMPEZAR ESTE PROYECTO:
 AUTOR/ES:
