@@ -120,6 +120,16 @@ public class UT5EjerArrays {
     }
 
     /**
+     * Con System.arraycopy, con el mismo array como origen y destino
+     */
+    public void rotarDerechaV3(int[] numeros) {
+        int ultimo = numeros[numeros.length - 1];//Guardamos el valor de la última posición
+        //Copiamos cada elemento al mismo array, una posición a la derecha. Todos excepto el último, que ya hemos guardado
+        System.arraycopy(numeros, 0, numeros, 1, numeros.length - 1);
+        numeros[0] = ultimo;
+    }
+
+    /**
      * Ejercicio 5.10
      * expande el array original numeros de la forma:
      *  crea un nuevo array con el doble de tamaño que el original
@@ -129,8 +139,8 @@ public class UT5EjerArrays {
         int[] expandido = new int[numeros.length * 2];
         //Vamos recorriendo el array de origen
         for (int i = 0; i < numeros.length; i++) {
-            expandido[i*2] = numeros[i];
-            expandido[i*2+1] = numeros[i];
+            expandido[i * 2] = numeros[i];
+            expandido[i * 2 + 1] = numeros[i];
         }
         return expandido;
     }
@@ -140,7 +150,7 @@ public class UT5EjerArrays {
      * genera 100 nos aleatorios entre 1 y 9 y devuelve la frecuencia de aparición del valor 1, del
      * valor 2, del valor 3
      */
-    public int[] calcularFrecuencias(){
+    public int[] calcularFrecuencias() {
         //Usaremos la posición i del array como número del que medimos la frecuancia.
         // Así que necesitamos un array de 9 posiciones
         int[] frecuencias = new int[9];
@@ -148,7 +158,7 @@ public class UT5EjerArrays {
         Random generador = new Random();
         for (int i = 0; i < 100; i++) {
             int aleatorio = generador.nextInt(9) + 1;
-            frecuencias[aleatorio-1]++;
+            frecuencias[aleatorio - 1]++;
         }
         return frecuencias;
     }
