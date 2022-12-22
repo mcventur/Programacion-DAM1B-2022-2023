@@ -30,5 +30,15 @@ public class DemoListaNumeros {
         //Borramos los impares (V2)
         lnOrdenado.borrarImparesV2();
         System.out.println("Después de borrar los impares: " + lnOrdenado.toString());
+
+        System.out.println();
+        System.out.println("********************   Borrado total   ********************");
+        //Borramos todos los elementos
+        ln.borrarTodos();
+        System.out.println("Después de borrar todos: " + ln);
+        //Comprobamos que podemos añadir unm nuevo elemento tras el borrado total
+        ln.addNumero(100);
+        System.out.println("Añadido un 100 tras el borrado: " + ln);
+
     }
 }

@@ -180,4 +180,12 @@ public class ListaNumeros {
         }
     }
 
+    /**
+     * Borra todos los elementos del array
+     */
+    public void borrarTodos(){
+        //Así de simple. No se borra realmente, pero sí "nos olvidamos" de todos.
+        pos = 0;
+    }
+
 }
