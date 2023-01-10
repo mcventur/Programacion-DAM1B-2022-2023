@@ -46,5 +46,42 @@ public class AppUT5EjerArrays {
         for (int i = 0; i < arrFrecuencias.length; i++) {
             System.out.println("Apariciones del " + (i + 1) + ": " + arrFrecuencias[i]);
         }
+
+
+        /*Pruebas funciones extras navidades */
+        separador();
+        System.out.println("\n----------- navidades01() ---------------");
+        int[] numeros = new int[]{2034, 12, 223, 5432, 9999};
+        System.out.println(Arrays.toString(numeros));
+        UT5EjerArrays.navidades01(numeros);
+
+        separador();
+
+        System.out.println("\n----------- puente02() ---------------");
+        numeros = new int[]{2, 5, 7, 12, 9, 3};
+        UT5EjerArrays.navidades02(numeros);
+
+        separador();
+
+        System.out.println("\n----------- puente03() ---------------");
+        numeros = new int[]{2, 15, 7, 12, 9, 3};
+        System.out.println(Arrays.toString(numeros));
+        int a = 1;
+        int b = 4;
+        System.out.println("Copia ordenada en el intervalo [" + a + ", " + b + "]\n" +
+                Arrays.toString(UT5EjerArrays.navidades03(numeros, a, b)));
+        a = 4;
+        b = 5;
+        System.out.println("Copia ordenada en el intervalo [" + a + ", " + b + "]\n" +
+                Arrays.toString(UT5EjerArrays.navidades03(numeros, a, b)));
+        a = 1;
+        b = 14;
+        System.out.println("Copia ordenada en el intervalo [" + a + ", " + b + "]\n" +
+                Arrays.toString(UT5EjerArrays.navidades03(numeros, a, b)));
+    }
+
+    public static void separador() {
+        System.out.println("*************************************");
+
     }
 }

@@ -162,4 +162,99 @@ public class UT5EjerArrays {
         }
         return frecuencias;
     }
+
+    /* FUNCIONES EXTRAS PARA NAVIDAD */
+    /**
+     *   Escribe el array recibido como argumento desde el final hasta el principio
+     *   y en cada línea de la pantalla muestra el valor del elemento del array
+     *   junto a la suma de sus cifras
+     *
+     *   Si el array recibido es {2034, 12, 223, 5432, 9999}
+     *   se mostrará en pantalla:
+     *
+     *   9999 - 36
+     *   5432 - 14
+     *   223 - 7
+     *   12 - 3
+     *   2034 - 9
+     *
+     *   Hay que usar el método sumarCifras()
+     *
+     */
+    public static void navidades01(int[] numeros)    {
+        for (int i = numeros.length - 1; i >= 0; i--)  {
+            System.out.println(numeros[i]  + " - " + sumarCifras(numeros[i]));
+        }
+
+    }
+
+    /**
+     *  Dado un nº devuelve la suma de sus cifras
+     */
+    public static int sumarCifras(int n)    {
+        int suma = 0;
+        while (n != 0)  {
+            suma += n % 10;
+            n = n / 10;
+        }
+
+        return suma;
+    }
+
+    /**
+     *   Sustituir cada elemento del array numeros por el cuadrado del que está a su derecha
+     *   El último se sustituye por el cuadrado del primero
+     *
+     *   Si el array recibido es {2, 5, 7, 12, 9, 3}
+     *   al final queda {25, 49, 144, 81, 9, 4}
+     *
+     */
+    public static void navidades02(int[] numeros)    {
+        System.out.println(Arrays.toString(numeros));
+        int primero = numeros[0];
+        for (int i = 0; i < numeros.length - 1; i++)   {
+            numeros[i] = numeros[i + 1] * numeros[i + 1];
+        }
+        numeros[numeros.length - 1] = primero * primero;
+        System.out.println(Arrays.toString(numeros));
+    }
+
+    /**
+     *   Usando solo métodos de la clase Arrays
+     *   devuelve una copia ordenada del rango de valores
+     *   que están en el intervalo de posiciones [a, b] (ambos inclusive)
+     *   dentro de numeros
+     *
+     *   Si alguno de los parámetros a o b son incorrectos
+     *   se devuelve como copia un array de valores -1 de la
+     *   misma longitud que numeros
+     *
+     *   Si el array recibido es {2, 15, 7, 12, 9, 3}
+     *   y llamamos a navidades03(numeros, 1, 4)
+     *   se devuelve {7, 9, 12, 15}
+     *
+     *   Si el array recibido es {2, 15, 7, 12, 9, 3}
+     *   y llamamos a navidades03(numeros, 4, 5)
+     *   se devuelve {3, 9}
+     *
+     *   Si el array recibido es {2, 15, 7, 12, 9, 3}
+     *   y llamamos a navidades03(numeros, 1, 14)
+     *   se devuelve {-1, -1, -1, -1, -1, -1}
+     *
+     */
+    public static int[] navidades03(int[] numeros, int a, int b)    {
+        int[] copiaOrdenada;
+        if (a < 0 || b >= numeros.length || a > b) {
+            copiaOrdenada = new int[numeros.length];
+            Arrays.fill(copiaOrdenada, -1);
+        }
+        else {
+            copiaOrdenada =  Arrays.copyOfRange(numeros, a, b + 1);
+            Arrays.sort(copiaOrdenada);
+        }
+
+        return copiaOrdenada;
+    }
+
+
 }
